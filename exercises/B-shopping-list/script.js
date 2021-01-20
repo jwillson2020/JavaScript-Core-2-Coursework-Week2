@@ -8,9 +8,10 @@ document.getElementById("content").appendChild(unOrdered);
 // Write your code here...
 
   for(let i = 0; i < shopping.length; i++){
-    let  list = document.createElement("LI");  
+    let  list = document.createElement("LI"); 
+  list.appendChild(document.createTextNode(shopping[i])); 
     //array[i] = shopping[i];
-    shoppingList.innerHTML = `${shopping[i].name}`;
+   // shoppingList.innerHTML = `${shopping[i].name}`;
    unOrdered.appendChild(list);
  }
 
