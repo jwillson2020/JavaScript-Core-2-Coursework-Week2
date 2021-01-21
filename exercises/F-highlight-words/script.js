@@ -1,5 +1,23 @@
 function highlightWords(paragraph, colours) {
   // Write your code here...
+  let content = document.querySelector("#content");
+  document.body.appendChild(content);
+  document.getElementById("content").style.backgroundColor = "lightblue";
+  let pTag = document.createElement("P");
+  content.appendChild(pTag);
+  let selectTag = document.createElement("SELECT");
+  let OptionTag = document.createElement("OPTION");
+
+  for(let i = 0; i < paragraph.length; i++){
+    let spanTag = document.createElement("SPAN");
+    spanTag.setAttribute("id", "span");
+   pTag.appendChild(spanTag);
+
+   //spanTag.appendChild(document.createTextNode(paragraph[i]));
+  
+}
+
+console.log(paragraph.length)
 }
 
 const paragraph =

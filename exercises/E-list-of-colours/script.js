@@ -7,21 +7,24 @@ function listOfColours(colours) {
   content.appendChild(pTag);
   let selectTag = document.createElement("SELECT");
   pTag.appendChild(selectTag);
-  
+  selectTag.setAttribute("id", "selectMe")
 
   for(let i = 0; i < colours.length; i++){
   let optionTag = document.createElement("OPTION");
   selectTag.appendChild(optionTag);
   optionTag.appendChild(document.createTextNode(colours[i])); 
   optionTag.setAttribute("id", "myOption");
+  optionTag.setAttribute("value", (colours[i]));
+   //var x = "colours[i]";
+   document.querySelector("#selectMe").addEventListener("click", myFunction );
 
   
-  document.querySelectorAll('#myOption').forEach(item => {
-    item.addEventListener('click', event => {
-      //handle click
-      myTest.style.backgroundColor = "red";
-    })
-  })
+  }
+  function myFunction() {
+    //var selectValue = document.getElementById(("colour[i]".value));
+      //var x = colours[i];
+      document.getElementById("myTest").style.backgroundColor = "red";
+     // console.log(x);
   }
 
 
@@ -35,6 +38,20 @@ function listOfColours(colours) {
   document.getElementById("myTest").style.backgroundColor = "grey";
   document.getElementById("myTest").innerHTML = "Test Colour";
 
+  
+    
+  
+
+  //for(let h = 0; h< colours.length; h++){
+
+  //}
+
+  //document.querySelectorAll('#myOption').forEach(item => {
+    //item.addEventListener('click', event => {
+      //handle click
+      //myTest.style.backgroundColor = "red";
+    //})
+  //})
 /*
   if (colours[i] === "red" ) {
    
