@@ -3,7 +3,6 @@ function readingList(books) {
   let content = document.querySelector("#content");
   document.body.appendChild(content);
   document.getElementById("content").style.backgroundColor = "lightblue";
-  
   let pTag = document.createElement("P");
   document.getElementById("content").appendChild(pTag);
   let unOrdered = document.createElement("UL");
